@@ -44,7 +44,10 @@ public class GrafoCena extends JFrame implements KeyListener {
     private Transform3D t3dCamera;
     
     private Mesa mesa;
-    private Cadeira cadeira;
+    private Cadeira cadeira1;
+    private Cadeira cadeira2;
+    private Cadeira cadeira3;
+    private Cadeira cadeira4;
     boolean screenMode = false;
     
     
@@ -162,12 +165,23 @@ public class GrafoCena extends JFrame implements KeyListener {
         subGrafoContexto.addChild(luzDir);
         
         
-        /*mesa = new Mesa(new Vector3f(0.0f,0.0f,0.0f));
+        mesa = new Mesa(new Vector3f(0.0f,0.0f,0.0f));
         subGrafoContexto.addChild(mesa.getMesa());
-        */
         
-        cadeira = new Cadeira(new Vector3f(0.0f,0.0f,0.0f));
-        subGrafoContexto.addChild(cadeira.getCadeira());
+        
+        cadeira1 = new Cadeira(new Vector3f(-1.6f,-0.4f,0.0f));
+        subGrafoContexto.addChild(cadeira1.getCadeira());
+        
+        
+        cadeira2 = new Cadeira(new Vector3f(1.6f,-0.4f,0.0f));
+        subGrafoContexto.addChild(cadeira2.getCadeira());
+        
+        cadeira3 = new Cadeira(new Vector3f(-1.6f,-0.4f,4.0f));
+        subGrafoContexto.addChild(cadeira3.getCadeira());
+        
+        cadeira4 = new Cadeira(new Vector3f(-1.6f,-0.4f,-4.0f));
+        subGrafoContexto.addChild(cadeira4.getCadeira());
+        
         
         //Retorna o BranchGroup contendo o subgrafo de contexto
         return subGrafoContexto;
@@ -189,13 +203,21 @@ public class GrafoCena extends JFrame implements KeyListener {
         if(e.getKeyCode() == KeyEvent.VK_W){
             Transform3D t3dTempo = new Transform3D();
             t3dTempo.rotX(Math.toRadians(20));
-            cadeira.setTransformacao(t3dTempo);
+            cadeira1.setTransformacao(t3dTempo);
+            cadeira2.setTransformacao(t3dTempo);
+            cadeira3.setTransformacao(t3dTempo);
+            cadeira4.setTransformacao(t3dTempo);
+            mesa.setTransformacao(t3dTempo);
         }
         
         if(e.getKeyCode() == KeyEvent.VK_S){
             Transform3D t3dTempo = new Transform3D();
             t3dTempo.rotX(Math.toRadians(-20));
-            cadeira.setTransformacao(t3dTempo);
+            cadeira1.setTransformacao(t3dTempo);
+            cadeira2.setTransformacao(t3dTempo);
+            cadeira3.setTransformacao(t3dTempo);
+            cadeira4.setTransformacao(t3dTempo);
+            mesa.setTransformacao(t3dTempo);
         }
     }
 

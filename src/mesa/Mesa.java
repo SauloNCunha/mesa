@@ -58,31 +58,32 @@ public class Mesa {
         
         /* Perna 1 */
         t3dPerna1 = new Transform3D();
-        t3dPerna1.set(new Vector3f(-1.8f, -0.4f, 0.8f));
+        t3dPerna1.set(new Vector3f(-1.8f, -0.65f, 0.9f));
         tgPerna1 = new TransformGroup(t3dPerna1);
-        perna1 = new Cylinder(0.1f, 0.8f, aparenciaPerna);
+        perna1 = new Cylinder(0.1f, 1.1f, aparenciaPerna);
         tgPerna1.addChild(perna1);
         
         /* Perna 2 */
         t3dPerna2 = new Transform3D();
-        t3dPerna2.set(new Vector3f(1.8f, -0.4f, 0.8f));
+        t3dPerna2.set(new Vector3f(1.8f, -0.6f, 0.9f));
         tgPerna2 = new TransformGroup(t3dPerna2);
-        perna2 = new Cylinder(0.1f, 0.8f, aparenciaPerna);
+        perna2 = new Cylinder(0.1f, 1.1f, aparenciaPerna);
         tgPerna2.addChild(perna2);
         
         /* Perna 3 */
         t3dPerna3 = new Transform3D();
-        t3dPerna3.set(new Vector3f(-1.8f, -0.4f, -0.8f));
+        t3dPerna3.set(new Vector3f(-1.8f, -0.6f, -0.9f));
         tgPerna3 = new TransformGroup(t3dPerna3);
-        perna3 = new Cylinder(0.1f, 0.8f, aparenciaPerna);
+        perna3 = new Cylinder(0.1f, 1.1f, aparenciaPerna);
         tgPerna3.addChild(perna3);
         
         /* Perna 4 */
         t3dPerna4 = new Transform3D();
-        t3dPerna4.set(new Vector3f(1.8f, -0.4f, -0.8f));
+        t3dPerna4.set(new Vector3f(1.8f, -0.6f, -0.9f));
         tgPerna4 = new TransformGroup(t3dPerna4);
-        perna4 = new Cylinder(0.1f, 0.8f, aparenciaPerna);
+        perna4 = new Cylinder(0.1f, 1.1f, aparenciaPerna);
         tgPerna4.addChild(perna4);
+        
         
         tgTampo.addChild(tgPerna1);
         tgTampo.addChild(tgPerna2);
