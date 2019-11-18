@@ -91,6 +91,12 @@ public class Mesa {
         tgTampo.addChild(tgPerna4);
     }
     
+     
+    public void setCadeira(TransformGroup cadeira){
+        tgTampo.addChild(cadeira);
+    }
+    
+    
     public TransformGroup getMesa(){
         return tgTampo;
     }
